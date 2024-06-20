@@ -29,7 +29,7 @@ function Navbar() {
         <ul className="flex gap-1 a-center h-full navs">
           <li className='pointer'>
             Deliver to this address : <br />
-            Bangaluru
+            Florida, USA
           </li>
           <li onClick={() => navigate('/')} className='pointer flex a-center'>
             <span class="material-symbols-rounded">
