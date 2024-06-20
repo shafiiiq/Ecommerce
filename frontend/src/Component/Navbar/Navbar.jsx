@@ -27,7 +27,7 @@ function Navbar() {
           </span>
         </div>
         <ul className="flex gap-1 a-center h-full navs">
-          <li className='pointer'>
+          <li className='pointer address-nav'>
             Deliver to this address : <br />
             Florida, USA
           </li>

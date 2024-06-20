@@ -39,3 +39,40 @@
     height: 4rem;
     width: 12rem;
 }
+
+@media screen and (max-width: 1426px) {
+    .single-img {
+        max-height: 24rem;
+        height: 24rem;
+        max-width: 34rem;
+    }
+
+    .pl-6 {
+        padding-left: 1rem;
+    }
+
+    .this-nov {
+        display: none;
+    }
+
+    .size-div.grid {
+        display: none;
+    }
+
+    .add-to-cart {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 726px) {
+    .single-img {
+        max-height: 19rem;
+        height: 19rem;
+        max-width: 34rem;
+    }
+
+    .pl-6 {
+        padding-left: 1rem;
+    }
+
+}

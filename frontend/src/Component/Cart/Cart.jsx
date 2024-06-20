@@ -36,7 +36,7 @@ function Cart() {
 
     return (
         <div className='Cart-wrapper w-full scroll-hidden'>
-            <div className="cart scroll-y scroll-hidden-x grid c-repeat-2 w-full gap-1 p-inline-4 p-block-3">
+            <div className="cart scroll-y scroll-hidden-x grid c-repeat-2 w-full gap-1 p-inline-4 p-block-3 p-center">
                 {
                     cart.length > 0 ? (
                         cart.map((product, prodId) => (
@@ -54,17 +54,17 @@ function Cart() {
                                     <p className="single-descripion-cart">
                                         {product.description}
                                     </p>
-                                    <p className="single-category">
+                                    <p className="single-category thisnone">
                                         <span className='bold-600'>Category: </span> <span>
                                             {product.category}
                                         </span>
                                     </p>
-                                    <p className="single-type">
+                                    <p className="single-type thisnone">
                                         <span className='bold-600'>Color: </span> <span>
                                             {product.color}
                                         </span>
                                     </p>
-                                    <p className="single-quality">
+                                    <p className="single-quality thisnone">
                                         <span className='bold-600'>Weight: </span> <span>
                                             {product.weight}
                                             <span>g</span>

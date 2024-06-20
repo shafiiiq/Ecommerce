@@ -39,3 +39,18 @@
     font-size: 25px;
     color: rgb(240, 6, 6);
 }
+
+@media screen and (max-width: 1326px) {
+    .search {
+        display: none;
+    }
+    .address-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 726px) {
+    .c-repeat-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

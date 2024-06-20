@@ -93,11 +93,11 @@ function ProductsDetails() {
                         <p className="single-description">
                             {product.description}
                         </p>
-                        <p className="select-size font-sm mt-1">
+                        <p className="select-size font-sm mt-1 this-nov">
                             Select size
                         </p>
                         <div className="size-div grid gap-1 c-repeat-5 mt-1">
-                            <div className="size-items font-lg r-4 flex a-center j-center pointer">
+                            <div className="size-items font-lg r-4 flex a-center j-center pointer this-nov">
                                 S
                             </div>
                             <div className="size-items font-lg r-4 flex a-center j-center pointer">

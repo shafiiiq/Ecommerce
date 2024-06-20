@@ -259,7 +259,7 @@ section {
 
 /* .login section starts  */
 
-.login-wrapper > img {
+.login-wrapper>img {
     width: 12rem;
     height: 3rem;
     object-fit: cover;
@@ -307,5 +307,7 @@ section {
 }
 
 .account-wrapper {
-    padding-inline: 37rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
