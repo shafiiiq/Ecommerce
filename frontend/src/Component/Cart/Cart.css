@@ -1,0 +1,42 @@
+.cart {
+    max-height: calc(100% + 0rem);
+}
+
+.cart-img {
+    height: 90%;
+    width: 15rem;
+    min-width: 15rem;
+}
+
+.cart-items {
+    max-width: 47rem;
+    height: 20rem;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.remove-cart {
+    width: 30%;
+    height: 3rem;
+    background-color: rgb(227, 14, 14);
+}
+
+.remove-cart:hover {
+    background-color: rgb(180, 10, 10);
+}
+
+.quantity {
+    border: 1px solid rgb(176, 168, 168);
+    padding: 0.5rem;
+}
+
+.no-cart {
+    width: 100vw;
+    height: 40rem;
+}
+
+
+.single-descripion-cart {
+    max-width: 24rem;
+    overflow: hidden;
+}

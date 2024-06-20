@@ -1,0 +1,56 @@
+.Products {
+    max-height: calc(100% + 0rem);
+}
+
+.product-lists-item {
+    height: 8rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.product-img  {
+    height: 5rem;
+    width: 5rem;
+}
+
+.this-item {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+}
+
+.this-title {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+}
+
+.prod-head {
+    background-color: rgb(31, 30, 30);
+    height: 3rem;
+    padding-block: 1rem;
+}
+
+.action {
+    gap: 1rem;
+}
+
+.btn {
+    height: 3rem;
+    width: 50%;
+    cursor: pointer;
+}
+
+.btn-del {
+    background-color: red;
+    color: white;
+}
+
+.btn-upt {
+    background-color: rgb(151, 158, 19);
+    color: black;
+}
+
+.results {
+    gap: 0.5rem;
+}

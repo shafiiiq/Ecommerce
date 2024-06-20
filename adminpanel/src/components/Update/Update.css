@@ -1,0 +1,19 @@
+.form {
+    max-height: calc(100% + 2rem);
+}
+
+
+.add-image {
+    height: 10rem;
+    width: 100%;
+    border: 1px solid white;
+}
+
+.file-input  {
+    opacity: 0;
+}
+
+
+.add-image-text span{
+    font-size: 80px;
+}

@@ -1,0 +1,46 @@
+.Products-wrapper {
+    height: 90%;
+}
+
+.products {
+    height: 100%;
+    max-height: calc(100% + 0rem);
+}
+
+.products-details {
+    padding-left: 0.5rem;
+}
+
+.products-list  {
+    height: 26rem;
+    padding: 0.5rem;
+    background-color: white;
+    box-shadow: 0 0 100px 5px rgba(0, 0, 0, 0.2);
+    max-width: 18rem;
+}
+
+.products-list:hover {
+    box-shadow: 0 0 120px 5px rgba(0, 0, 0, 0.4);
+}
+
+.product-image {
+    max-height: 10rem;
+    min-height: 10rem;
+}
+
+.description {
+    max-width: 99%;
+    overflow: hidden;
+    max-height: 5.5rem;
+    position: relative;
+}
+
+
+.category-title {
+    color: green
+}
+
+.offer {
+    color: rgb(181, 12, 12);
+    margin-top: 0.5rem;
+}

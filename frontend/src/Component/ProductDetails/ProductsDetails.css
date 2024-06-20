@@ -1,0 +1,41 @@
+.single-img {
+    max-height: 34rem;
+    height: 34rem;
+    max-width: 34rem;
+}
+
+.size-items {
+    height: 4rem;
+    width: 4rem;
+    background-color: rgb(235, 234, 239);
+}
+
+.size-items:hover {
+    background-color: rgb(213, 211, 218);
+}
+
+
+.size-div {
+    place-items: start;
+    place-content: start;
+    width: 50%;
+}
+
+.star span {
+    color: red;
+}
+
+.add-to-cart {
+    width: 30%;
+    height: 4rem;
+    background-color: rgb(227, 14, 14);
+}
+
+.add-to-cart:hover {
+    background-color: rgb(180, 10, 10);
+}
+
+.quantity {
+    height: 4rem;
+    width: 12rem;
+}
