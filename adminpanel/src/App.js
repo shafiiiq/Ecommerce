@@ -13,13 +13,15 @@ import Update from './components/Update/Update';
 function App() {
 
   const dispatch = useDispatch()
-  
+
+  // fetch produts and store it into redux store 
   const fetchProducts = async () => {
     await fetch('http://localhost:4000/get-products')
       .then((result) => result.json())
       .then((data) => {
         dispatch(setProducts(data));
       })
+      .catch((err) => alert('error :' + err))
   }
   useEffect(() => {
     fetchProducts()
@@ -34,7 +36,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/add-products" element={<AddProducts />} />
             <Route path="/products-lists" element={<Products />} />
-            <Route path="/update/product/:id" element={<Update/>} />
+            <Route path="/update/product/:id" element={<Update />} />
           </Routes>
         </div>
       </div>

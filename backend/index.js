@@ -71,6 +71,10 @@ const Product = mongoose.model("Product", {
         type: String,
         require: true
     },
+    brand: {
+        type: String,
+        require: true
+    },
     color: {
         type: String,
         require: true

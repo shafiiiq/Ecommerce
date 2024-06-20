@@ -8,9 +8,9 @@ function Products() {
 
     const products = useSelector((state) => state.cart.products);
     const count = useSelector((state) => state.cart.productCount);
-
     const navigate = useNavigate();
 
+    // delete product using item id 
     const deleteProduct = async (itemId) => {
         console.log(itemId);
         await fetch('http://localhost:4000/delete-product', {
@@ -30,6 +30,7 @@ function Products() {
             .catch((error) => console.error('Error:', error));
     }
 
+    // navigate to update form 
     const controlUpdate = (itemId) => {
         navigate(`/update/product/${itemId}`)
     }

@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '../../cssHelper/helper.css';
 
 function Sign() {
     const navigate = useNavigate();
-    const dispatch = useDispatch();
 
     // State for user data and error messages
     const [userData, setUserData] = useState({

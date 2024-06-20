@@ -10,7 +10,6 @@ function Update() {
 
     const [product, setProduct] = useState([])
     const [image, setImage] = useState(false)
-
     const [newDetails, setNewDetails] = useState([
         {
             name: '',
@@ -25,7 +24,19 @@ function Update() {
             category: '',
         }
     ]);
+    const handleUpdate = (e) => {
+        setNewDetails({
+            ...newDetails,
+            [e.target.name]: e.target.value,
+        })
+    }
 
+    // handle image change while uploading 
+    const handleImageChange = (e) => {
+        setImage(e.target.files[0])
+    };
+
+    // get item using item id from param to update the details 
     const getItem = async (itemId) => {
         try {
             const response = await fetch(`http://localhost:4000/product/${itemId}`, {
@@ -51,41 +62,15 @@ function Update() {
         getItem(id);
     }, [])
 
-
-    const handleUpdate = (e) => {
-        setNewDetails({
-            ...newDetails,
-            [e.target.name]: e.target.value,
-            [e.target.price]: e.target.value,
-            [e.target.quality]: e.target.value,
-            [e.target.brand]: e.target.value,
-            [e.target.color]: e.target.value,
-            [e.target.size]: e.target.value,
-            [e.target.description]: e.target.value,
-            [e.target.quantity]: e.target.value,
-            [e.target.weight]: e.target.value,
-            [e.target.category]: e.target.value,
-        })
-    }
-
-
-    const handleImageChange = (e) => {
-        setImage(e.target.files[0])
-    };
-
-
     // Update details 
     const updateDetails = async (e) => {
         e.preventDefault()
         let responseData;
-
         let product = newDetails;
-
-
-
         let formData = new FormData();
         formData.append('product', image)
 
+        // if image exist for updating, includes image for updating ; else update only the details 
         if (image) {
             await fetch('http://localhost:4000/upload', {
                 method: 'POST',
@@ -101,6 +86,7 @@ function Update() {
                 console.log(product);
                 product.image = responseData.image_url
 
+                // if have image only for updating then send only image with body ; else add both details and image 
                 const bodyContent = product.name ? JSON.stringify(product) : JSON.stringify({ image: responseData.image_url });
                 await fetch(`http://localhost:4000/update-product/${id}`, {
                     method: 'PUT',
@@ -138,8 +124,6 @@ function Update() {
                 })
         }
     };
-
-
 
     return (
         <div className="form scroll-y scroll-hidden-x w-full">
@@ -185,7 +169,7 @@ function Update() {
                     </div>
                     <div className="items flex flex-column gap">
                         Size
-                        <input onChange={handleUpdate} value={newDetails.size} placeholder={product.size} type="text" size='size' className="full radius pad-inline glass height" />
+                        <input onChange={handleUpdate} value={newDetails.size} placeholder={product.size} type="text" name='size' className="full radius pad-inline glass height" />
                     </div>
                     <div className="items flex flex-column gap">
                         Description

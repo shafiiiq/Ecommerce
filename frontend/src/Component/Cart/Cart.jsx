@@ -6,12 +6,14 @@ import { useDispatch, useSelector } from 'react-redux';
 function Cart() {
     const dispatch = useDispatch();
 
+    // get cart from store 
     const cart = useSelector((state) => state.cart.cartItems);
 
     useEffect(() => {
         console.log("Cart count:", cart);
     }, [cart])
 
+    // romove item from cart 
     const removeFromCart = (itemId) => {
         if (localStorage.getItem('auth-token')) {
             fetch('http://localhost:4000/removefromcart', {
@@ -31,8 +33,6 @@ function Cart() {
                 .catch(err => console.log(err))
         }
     }
-
-
 
     return (
         <div className='Cart-wrapper w-full scroll-hidden'>

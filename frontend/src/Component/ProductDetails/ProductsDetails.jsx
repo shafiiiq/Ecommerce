@@ -5,12 +5,14 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 function ProductsDetails() {
+
     const navigate = useNavigate();
     let { id } = useParams();
     const cart = useSelector((state) => state.cart.cartItems);
     const [product, setProduct] = useState({});
     const thisItem = cart.find(item => item.id === parseInt(id));
 
+    // add to cart 
     const addToCart = (itemId) => {
         if (localStorage.getItem('auth-token')) {
             fetch('http://localhost:4000/addtocart', {
@@ -31,6 +33,7 @@ function ProductsDetails() {
         }
     }
 
+    // get current icon with id from params
     const getItem = async (itemId) => {
         try {
             const response = await fetch(`http://localhost:4000/product/${itemId}`, {

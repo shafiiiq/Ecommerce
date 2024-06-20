@@ -12,16 +12,17 @@ import ProductsDetails from './Component/ProductDetails/ProductsDetails';
 import { setCartItems } from './redux/account'
 
 function App() {
+  // get navbar state from store 
   const showNavbar = useSelector((state) => state.account.showNavbar);
-
   const dispatch = useDispatch();
 
+  // get cart 
   const getCart = async () => {
     await fetch('http://localhost:4000/getcart', {
       method: 'get',
       headers: {
         Accept: "application/json",
-        'Content-Type': 'application/json', // Add this line
+        'Content-Type': 'application/json',
         'auth-token': `${localStorage.getItem('auth-token')}`,
       }
     })
@@ -29,11 +30,10 @@ function App() {
       .then((data) => {
         dispatch(setCartItems(data));
       })
-      .catch(err => console.log(err))
+      .catch((err) => alert('error :' + err))
   }
   useEffect(() => {
     getCart()
-    // console.log(cart);
   }, [])
 
   return (

@@ -19,27 +19,17 @@ function AddProducts() {
             quantity: ''
         }
     ]);
-
     const setDetails = (e) => {
         setProductDetails({
             ...productDetails,
             [e.target.name]: e.target.value,
-            [e.target.price]: e.target.value,
-            [e.target.quality]: e.target.value,
-            [e.target.brand]: e.target.value,
-            [e.target.color]: e.target.value,
-            [e.target.size]: e.target.value,
-            [e.target.description]: e.target.value,
-            [e.target.quantity]: e.target.value,
-            [e.target.weight]: e.target.value,
-            [e.target.category]: e.target.value,
         })
     }
-    
     const addImage = (e) => {
         setImage(e.target.files[0])
     }
 
+    // add product into database 
     const uploadDetails = async (e) => {
         e.preventDefault()
         let responseData;
@@ -82,6 +72,8 @@ function AddProducts() {
             })
         }
     }
+
+    console.log(productDetails);
     return (
         <div className="form scroll-y scroll-hidden-x w-full">
             <form action="" className="w-full flex flex-column gap-4 p-10">
@@ -121,7 +113,7 @@ function AddProducts() {
                     </div>
                     <div className="items flex flex-column gap">
                         Size
-                        <input onChange={setDetails} value={productDetails.size} type="text" size='size' placeholder="Size" className="full radius pad-inline glass height" />
+                        <input onChange={setDetails} value={productDetails.size} type="text" name='size' placeholder="Size" className="full radius pad-inline glass height" />
                     </div>
                     <div className="items flex flex-column gap">
                         Description

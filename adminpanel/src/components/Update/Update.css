@@ -17,3 +17,7 @@
 .add-image-text span{
     font-size: 80px;
 }
+
+::placeholder {
+    color: rgb(231, 226, 226);
+}

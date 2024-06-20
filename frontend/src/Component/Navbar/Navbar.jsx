@@ -8,9 +8,6 @@ import { useNavigate } from 'react-router-dom'
 function Navbar() {
 
   const cartCount = useSelector((state) => state.cart.cartCount);
-
-  const account = useSelector((state) => state.account)
-  console.log(account);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

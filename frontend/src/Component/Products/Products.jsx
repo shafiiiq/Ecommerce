@@ -8,23 +8,18 @@ import { useNavigate } from 'react-router-dom'
 
 function Products() {
 
-    const [productDetail, setProductDetail] = useState(false)
-    const [sendProductDetail, setSendProductDetail] = useState([])
     const [products, setProducts] = useState([])
 
+    // fetch products 
     const fetchProducts = async () => {
         await fetch('http://localhost:4000/get-products')
             .then((result) => result.json())
             .then((data) => setProducts(data))
+            .catch((err) => alert('error :' + err))
     }
     useEffect(() => {
         fetchProducts()
     }, [])
-
-    const sendProduct = (product) => {
-        setSendProductDetail(product)
-        setProductDetail(true)
-    }
 
     const navigate = useNavigate();
     const handleProductClick = (productId) => {
