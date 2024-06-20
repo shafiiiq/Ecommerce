@@ -37,7 +37,7 @@ function Products() {
                         <div onClick={() => handleProductClick(product.id)} key={index} className="products-list flex flex-col gap-1 pointer ease-in-out duration-400">
                             <img src={product.image || ''} className='w-full cover product-image' alt={product.name} />
                             <div className="products-details flex flex-col">
-                                <p className="product-name font-semibold text-sm">
+                                <p className="product-name font-md bold-600 text-sm">
                                     {product.name}
                                 </p>
                                 <p className='price font-bold text-md'>
