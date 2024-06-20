@@ -110,7 +110,7 @@ function Login() {
         <div className="login-wrapper account-wrapper radius flex flex-column a-center j-center gap pad shadow black-clr white-bg w-full">
             <p className="font-md bold">Login</p>
             <div className="form flex w-full flex-column relative">
-                <label htmlFor="email">Enter your email or phone</label>
+                <label htmlFor="email">Enter your email address</label>
                 <input
                     onChange={addLogin}
                     value={loginData.email}
