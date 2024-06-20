@@ -16,7 +16,7 @@ function Sidebar() {
             <h1 className="h1 o">O</h1>
             <div className="sidebar full">
                 <ul className="flex flex-column gap">
-                    <li onClick={() => navigate('/')}  className="home height radius-vh-left z-high white-clr pointer w-full flex a-center pad-inline ease gap">
+                    <li onClick={() => navigate('/')} className="home height radius-vh-left z-high white-clr pointer w-full flex a-center pad-inline ease gap">
                         <span className="material-symbols-rounded">home</span>
                         Home
                     </li>
@@ -24,9 +24,11 @@ function Sidebar() {
                         <span className="material-symbols-rounded">add_shopping_cart</span>
                         Add products
                     </li>
-                    <li onClick={() => navigate('/products-lists')}  className="height radius-vh-left z-high white-clr pointer w-full flex a-center pad-inline ease gap">
-                        <span className="material-symbols-rounded">local_shipping</span>
-                        Productct List
+                    <li onClick={() => navigate('/products-lists')} className="height radius-vh-left z-high white-clr pointer w-full flex a-center pad-inline ease gap">
+                        <span class="material-symbols-rounded">
+                            format_list_bulleted
+                        </span>
+                        Products List
                     </li>
                     <li className="height radius-vh-left z-high white-clr pointer w-full flex a-center pad-inline ease gap">
                         <span className="material-symbols-rounded">notifications</span>
